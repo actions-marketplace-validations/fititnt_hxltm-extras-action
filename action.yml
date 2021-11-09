@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: Unlicense OR 0BSD
-name: "Actions with extras for HXLTM"
-# Market place category: Localization, Publishing
+name: "Actions with extras tools for HXLTM"
+# Market place category: Localization, Utilities
 description: |
-  Actions with extras for HXLTM
+  This only includes: csvkit and translate-toolkit. See hxltm-action HXL/HXLTM main action. 
 # description: 125 characters
 branding:
   icon: 'skip-forward'
@@ -11,17 +11,17 @@ inputs:
   bin:
     description: "The executable to run."
     required: true
-  infile:
-    description: "The input file for the program defined by bin parameter"
-    required: false
-    default: "fontem.ext"
-  outfile:
-    description: "The input file for the program defined by bin parameter"
-    required: false
-    default: "objectivum.ext"
   args:
     description: "Arguments passed for the program defined by bin parameter."
     required: false
+  infile:
+    description: "The input file for the program defined by bin parameter"
+    required: false
+    default: ""
+  outfile:
+    description: "The input file for the program defined by bin parameter"
+    required: false
+    default: ""
     # default: "fontem.ext"
   # # Languages ------------------------------------------------------------------
   # working_languages:
@@ -70,13 +70,13 @@ runs:
     - ${{ inputs.infile }}
     - ${{ inputs.outfile }}
     - ${{ inputs.args }}
-  env:
-    working_languages: ${{ inputs.working_languages }}
-    non_working_languages: ${{ inputs.non_working_languages }}
-    auxiliary_languages: ${{ inputs.auxiliary_languages }}
-    source_language: ${{ inputs.source_language }}
-    target_language: ${{ inputs.target_language }}
-    export_ad_hoc_template: ${{ inputs.export_ad_hoc_template }}
-    export_data_exchange_standard: ${{ inputs.export_data_exchange_standard }}
-    dump_abstract_syntax_tree: ${{ inputs.dump_abstract_syntax_tree }}
-    debug: ${{ inputs.debug }}
+  # env:
+  #   working_languages: ${{ inputs.working_languages }}
+  #   non_working_languages: ${{ inputs.non_working_languages }}
+  #   auxiliary_languages: ${{ inputs.auxiliary_languages }}
+  #   source_language: ${{ inputs.source_language }}
+  #   target_language: ${{ inputs.target_language }}
+  #   export_ad_hoc_template: ${{ inputs.export_ad_hoc_template }}
+  #   export_data_exchange_standard: ${{ inputs.export_data_exchange_standard }}
+  #   dump_abstract_syntax_tree: ${{ inputs.dump_abstract_syntax_tree }}
+  #   debug: ${{ inputs.debug }}

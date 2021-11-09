@@ -19,6 +19,8 @@
         - [`syntactic-sugar-not-implemented`](#syntactic-sugar-not-implemented)
 - [hxltm-extras-action tools](#hxltm-extras-action-tools)
     - [csvkit](#csvkit)
+    - [miller](#miller)
+    - [rows](#rows)
     - [translate-toolkit](#translate-toolkit)
 - [License](#license)
 
@@ -69,7 +71,7 @@ This documentation explains the [action.yml](action.yml) and
 
 ### Baseline inputs
 
-Baseline inputs, together with [environment variables](environment-variables),
+Baseline inputs, together with [Environment variables](#environment-variables),
 are enough to abstract how to use the underlying command line tools.
 
 #### `bin`
@@ -132,7 +134,13 @@ and [Environment variables](#environment-variables).
 ## hxltm-extras-action tools
 
 ### csvkit
-- <https://csvkit.readthedocs.io/>
+- <https://csvkit.readthedocs.io>
+
+### miller
+- <https://miller.readthedocs.io>
+
+### rows
+- <http://turicas.info/rows/>
 
 ### translate-toolkit
 - <http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/index.html>
