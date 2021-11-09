@@ -18,7 +18,9 @@
     - [Syntactic sugar inputs](#syntactic-sugar-inputs)
         - [`syntactic-sugar-not-implemented`](#syntactic-sugar-not-implemented)
 - [hxltm-extras-action tools](#hxltm-extras-action-tools)
+    - [POSIX commands](#posix-commands)
     - [csvkit](#csvkit)
+    - [csv-diff](#csv-diff)
     - [miller](#miller)
     - [rows](#rows)
     - [translate-toolkit](#translate-toolkit)
@@ -133,8 +135,35 @@ and [Environment variables](#environment-variables).
 
 ## hxltm-extras-action tools
 
+### POSIX commands
+
+| Name | Description |
+|------|-------------|
+| `comm` | Select the lines common to two sorted files or the lines contained in only one of them.  (Manual: `man 1 comm` on your system, [GNU](https://linux.die.net/man/1/comm), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=comm&sektion=1).) |
+| `cut` | Select portions of each line in one or more files.  (Manual: `man 1 cut`, [GNU](https://linux.die.net/man/1/cut), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=cut&sektion=1).) |
+| `grep` | Select the lines that match or do not match a pattern from one or more files.  (Manual: `man 1 grep`, [GNU](https://linux.die.net/man/1/grep), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=1).) |
+| `join` | Take two files sorted by a common field and join their lines on the value of that field.  Lines with values that do not appear in the other file are discarded.  (Manual: `man 1 join`, [GNU](https://linux.die.net/man/1/join), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=join&sektion=1).) |
+| `paste` | Combine several consecutive lines in a text file into one.  (Manual: `man 1 paste`, [GNU](https://linux.die.net/man/1/paste), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=paste&sektion=1).) |
+| `sort` | Sort lines by key fields.  (Manual: `man 1 sort`, [GNU](https://linux.die.net/man/1/sort), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=sort&sektion=1).) |
+| `uniq` | Find or remove repeated lines.  (Manual: `man 1 uniq`, [GNU](https://linux.die.net/man/1/uniq), [FreeBSD](https://www.freebsd.org/cgi/man.cgi?query=uniq&sektion=1).) |
+
+> Documentation source: [dbohdan/structured-text-tools](https://github.com/dbohdan/structured-text-tools)
+
+Other commands installed
+
+- `bash` (as 2021-11-09: _GNU bash, version 5.1.4(1)-release (x86_64-pc-linux-gnu)_)
+- `diff` (as 2021-11-09: _diff (GNU diffutils) 3.7_)
+- `git` (as 2021-11-09: _git version 2.30.2_)
+- `sed` (as 2021-11-09: _sed (GNU sed) 4.7_)
+- `unzip` (as 2021-11-09: _UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP._)
+- `tar` (as 2021-11-09: _tar (GNU tar) 1.34_)
+- `xz` (as 2021-11-09: _xz (XZ Utils) 5.2.5_)
+
 ### csvkit
 - <https://csvkit.readthedocs.io>
+
+### csv-diff
+- <https://github.com/simonw/csv-diff>
 
 ### miller
 - <https://miller.readthedocs.io>

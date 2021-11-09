@@ -48,6 +48,41 @@ jobs:
           bin: "csv2po"
           args: "--help"
 
+      # cd /workspace/git/fititnt/hxltm-action-example/data/verum/TICO-19/terminologies-google
+      # mlr --csv cat data/verum/TICO-19/terminologies-google/*.csv > data/verum/TICO-19/terminologies-google.csv
+      # mlr --csv cat data/verum/TICO-19/terminologies-facebook/*.csv > data/verum/TICO-19/terminologies-facebook.csv
+
+
+      ### RU
+      # hxltmdexml --agendum-linguam eng-Latn@en,rus-Cyrl@ru data/verum/TICO-19/translation-memories/all.en-ru.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-ru.tm.hxl.csv
+
+      ### FRA
+      # hxltmdexml --agendum-linguam eng-Latn@en,fra-Latn@fr data/verum/TICO-19/translation-memories/all.en-fr.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-fr.tm.hxl.csv
+
+      ### HIN
+      # hxltmdexml --agendum-linguam eng-Latn@en,hin-Deva@hi data/verum/TICO-19/translation-memories/all.en-hi.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-hi.tm.hxl.csv
+
+      # hxltmdexml --agendum-linguam eng-Latn@en,por-Latn@pt data/verum/TICO-19/translation-memories/all.en-pt-BR.tmx
+
+      # hxltmdexml --agendum-linguam eng-Latn@en data/verum/TICO-19/translation-memories/all.en-pt-BR.tmx data/verum/TICO-19/translation-memories-hxltm/all.en.tm.hxl.csv
+
+      # hxltmdexml --agendum-linguam eng-Latn@en,por-Latn@pt data/verum/TICO-19/translation-memories/all.en-pt-BR.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-pt-BR.tm.hxl.csv
+
+      # hxltmdexml --agendum-linguam eng-Latn@en,por-Latn@pt,rus-Cyrl@ru data/verum/TICO-19/translation-memories/all.en-ru.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-ru.tm.hxl.csv
+
+      # hxltmdexml --agendum-linguam eng-Latn@en,por-Latn@pt,rus-Cyrl@ru,spa-Latn@es,spa-Latn@es@419 data/verum/TICO-19/translation-memories/all.en-es-419.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-es-419.tm.hxl.csv
+
+      # hxltmdexml --agendum-linguam eng-Latn@en,por-Latn@pt,rus-Cyrl@ru,spa-Latn@es,spa-Latn-419@es-419 data/verum/TICO-19/translation-memories/all.en-es-419.tmx data/verum/TICO-19/translation-memories-hxltm/all.en-es-419.tm.hxl.csv
+
+      # data/verum/TICO-19/translation-memories-hxltm/all.en.tm.hxl.csv
+
+
+      # cp data/verum/TICO-19/translation-memories-hxltm/all.en.tm.hxl.csv data/verum/TICO-19/translation-memories.tm.hxl.csv
+
+      # hxlmerge --keys='#item+conceptum+codicem' --tags='#item' --merge data/verum/TICO-19/translation-memories.tm.hxl.csv data/verum/TICO-19/translation-memories-hxltm/all.en.tm.hxl.csv
+
+      # hxlmerge --keys='#item+conceptum+codicem' --tags='#item' --merge data/verum/TICO-19/translation-memories.tm.hxl.csv data/verum/TICO-19/translation-memories-hxltm/all.en.tm.hxl.csv data/verum/TICO-19/translation-memories-hxltm/all.en-ru.tm.hxl.csv
+
       # - name: "csv2po --help"
       #   uses: ./
       #   continue-on-error: true

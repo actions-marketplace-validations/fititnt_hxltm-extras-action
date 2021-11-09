@@ -57,6 +57,8 @@
 # exit 1
 
 echo "::group::Debug parameters"
+# awk --version
+# man awk
 echo "param 1 [[$1]]"
 echo "param 2 [[$2]]"
 echo "param 3 [[$3]]"

@@ -6,6 +6,7 @@
 #                 command here is just for internal debugging.
 #                 Quick test:
 #                   docker run --rm -it $(docker build -q .) 'find /usr/local/bin/ -executable -type f'
+#                   docker run --rm -it $(docker build -q .) 'awk --help'
 #                 Docker, quick build
 #                   docker build .
 #                 Docker, disk usage
@@ -55,10 +56,16 @@ FROM python:3.9-bullseye
 ## Installed with hxltm-action
 # RUN pip install hdp-toolchain[hxltm]
 
+### @see https://github.com/simonw/csv-diff
+## Extra size over python:3.9-alpine = ~6.827MB
+RUN pip install csv-diff
+
 #### https://github.com/turicas/rows
-## Extra size over python:3.9-alpine =  ~12MB
+## Extra size over python:3.9-alpine = ~12MB
 RUN pip install rows[cli]
 # RUN pip install rows[all]
+# TODO: the documented 'rows csv-merge' is not exposed neither
+#       via pip install rows[cli] or pip install rows[all]
 
 ### https://github.com/wireservice/csvkit
 ## Extra size over python:3.9-bullseye =  ~38MB
@@ -77,6 +84,10 @@ RUN apt-get update && apt-get install miller
 # xsv would require install cargo; skiping for now
 
 # @see https://github.com/dbohdan/structured-text-tools#csv
+
+# CSV Diffs
+#  - https://github.com/simonw/csv-diff
+#  - https://github.com/aswinkarthik/csvdiff
 
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
